@@ -116,4 +116,3 @@ urllib3
 websockets
 Werkzeug
 yarl
-yt-dlp
