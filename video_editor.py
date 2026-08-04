@@ -36,7 +36,7 @@ def random_shorts_clip(video_path, output_path, clip_duration=35):
     short_clip.close()
     cropped_clip.close()
 
-PIL_FONT = ImageFont.truetype(r"C:\Windows\Fonts\arialbd.ttf", 24)
+PIL_FONT = ImageFont.truetype(r"/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 24)
 
 _dummy = Image.new("RGB", (1, 1))
 _draw = ImageDraw.Draw(_dummy)
