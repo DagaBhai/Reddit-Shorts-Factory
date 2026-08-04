@@ -98,7 +98,7 @@ def add_Caption(video_path, start_time, duration, output_str):
         text_clip = (
             TextClip(
                 text=wrapped_text+"\n",
-                font=r"C:\Windows\Fonts\arialbd.ttf",
+                font=r"/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
                 font_size=24,
                 color="white",
                 stroke_color="black",
