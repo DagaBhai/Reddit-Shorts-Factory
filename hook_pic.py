@@ -58,7 +58,7 @@ def create_rectangle_with_overlays(text):
 
     try:
         font = ImageFont.truetype(
-            r"C:\Windows\Fonts\arialbd.ttf",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
             36
         )
     except:
@@ -101,4 +101,3 @@ def create_rectangle_with_overlays(text):
     )
 
     canvas.save("final_output.png")
-    canvas.show()
