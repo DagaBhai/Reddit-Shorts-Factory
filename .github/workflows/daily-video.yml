@@ -56,7 +56,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: daily-video
-          path: output/*.mp4
+          path: content/final_video.mp4
 
       - name: Create Issue
         uses: actions/github-script@v7
@@ -64,23 +64,13 @@ jobs:
           DATE: ${{ github.run_started_at }}
         with:
           script: |
-            const fs = require('fs');
-
-            let hook = "No hook found";
-            if (fs.existsSync("output/hook.txt")) {
-              hook = fs.readFileSync("output/hook.txt", "utf8").trim();
-            }
-
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `[${process.env.DATE.substring(0,10)}] ${hook}`,
+              title: `${process.env.DATE.substring(0,10)} - Daily Short`,
               body: `
               ## Daily Video
               
-              **Hook**
-              ${hook}
-              
-              The generated video has been uploaded as a workflow artifact named **daily-video**.
-                            `
-                          });
+              The generated video has been uploaded as the workflow artifact **daily-video**.
+              `
+                    });
