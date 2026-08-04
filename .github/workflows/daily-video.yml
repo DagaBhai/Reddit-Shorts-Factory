@@ -33,6 +33,20 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Cache background video
+        id: cache-bg
+        uses: actions/cache@v4
+        with:
+          path: assets/background.mp4
+          key: background-video-v1
+      
+      - name: Download background video
+        if: steps.cache-bg.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p assets
+          wget -O assets/background.mp4 \
+            https://github.com/DagaBhai/Reddit-Shorts-Factory/releases/download/v1/short.mp4
+
       - name: Run script
         env:
           APIKEY: ${{ secrets.APIKEY}}
