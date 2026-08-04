@@ -67,7 +67,7 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `${process.env.DATE.substring(0,10)} - Daily Short`,
+              title: `Daily Short #${context.runNumber}`,
               body: `
               ## Daily Video
               
