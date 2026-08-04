@@ -4,7 +4,6 @@ import json
 from script import get_story
 from tts_script import tts_function, get_duration
 from hook_pic import create_rectangle_with_overlays
-from video_download import download
 from video_editor import random_shorts_clip, audio_n_video, add_reddit_banner, add_Caption
 
 OUTPUT_DIR = "content"
@@ -19,10 +18,6 @@ SHORT_CLIP = os.path.join(OUTPUT_DIR, "shorts_output.mp4")
 MERGED_VIDEO = os.path.join(OUTPUT_DIR, "new_story.mp4")
 BANNER_VIDEO = os.path.join(OUTPUT_DIR, "caption_short.mp4")
 FINAL_VIDEO = os.path.join(OUTPUT_DIR, "final_video.mp4")
-
-print("[0/9] Downloading bg video...")
-download()
-print(" -> bg video Downloaded successfully loaded.")
 
 print("[1/9] Loading story script...")
 script = json.loads(get_story())
