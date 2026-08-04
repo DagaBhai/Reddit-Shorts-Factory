@@ -102,9 +102,3 @@ def create_rectangle_with_overlays(text):
 
     canvas.save("final_output.png")
     canvas.show()
-
-
-if __name__ == "__main__":
-    create_rectangle_with_overlays(
-        "I found a hidden room in my new apartment but the walls were entirely covered in my own childhood photos."
-    )
