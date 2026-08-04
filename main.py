@@ -51,7 +51,7 @@ print(
 
 print("[6/9] Creating background clip...")
 random_shorts_clip(
-    "assets/short.mp4",
+    "assets/background.mp4",
     SHORT_CLIP,
     clip_duration=total_duration,
 )
