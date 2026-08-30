@@ -116,3 +116,6 @@ urllib3
 websockets
 Werkzeug
 yarl
+qwen-tts
+torch
+soundfile
