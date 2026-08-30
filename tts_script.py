@@ -1,6 +1,7 @@
 import torch
 import soundfile as sf
 from qwen_tts import Qwen3TTSModel
+import AudioSegment
 
 def tts_function(text, video_name):
     model_name = "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
