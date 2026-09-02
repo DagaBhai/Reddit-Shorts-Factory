@@ -23,15 +23,16 @@ print("[1/9] Loading story script...")
 script = json.loads(get_story())
 hook = script["hook"]
 story = script["story"]
+voice = script["voice"]
 print(story)
 print(" -> Story script successfully loaded.")
 
 print("[2/9] Generating Hook TTS...")
-tts_function(hook, video_name=HOOK_MP3)
+tts_function(hook, voice, video_name=HOOK_MP3)
 print(" -> Hook audio generated.")
 
 print("[3/9] Generating Story TTS...")
-tts_function(story, video_name=STORY_MP3)
+tts_function(story, voice, video_name=STORY_MP3)
 print(" -> Story audio generated.")
 
 print("[4/9] Creating Reddit banner...")

@@ -3,7 +3,7 @@ import soundfile as sf
 from qwen_tts import Qwen3TTSModel
 from pydub import AudioSegment
 
-def tts_function(text, video_name):
+def tts_function(text, voice, video_name):
     model_name = "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
     model = Qwen3TTSModel.from_pretrained(
         "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
@@ -13,7 +13,7 @@ def tts_function(text, video_name):
     wavs, sr = model.generate_custom_voice(
         text=text,
         language="English",
-        speaker="Vivian",
+        speaker=voice,
     )
     sf.write(video_name, wavs[0], sr)
     print("Audio saved successfully!")
