@@ -12,11 +12,13 @@ def get_story():
     class response(BaseModel):
         hook: str = Field(description="generate a hook for the story")
         story: str = Field(description="This contains the story")
+        voice: str = Field(description="This specifies which voice to use")
         
     response = client.interactions.create(
         model="gemini-3.5-flash-lite",
         input = """
             Generate a Reddit story for a YouTube Short.
+            voices available : ['aiden', 'dylan', 'eric', 'ono_anna', 'ryan', 'serena', 'sohee', 'uncle_fu', 'vivian']
 
             Requirements:
             - Hook: 15-20 words.
