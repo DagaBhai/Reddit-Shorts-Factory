@@ -56,8 +56,6 @@ Temporary files are cleaned up automatically, leaving only the final video.
 
 4. Add a background video at `assets/background.mp4`.
 
-   GitHub Actions: When executed through a GitHub Actions workflow, the generated video is saved to daily-video/final_video.mp4 and automatically uploaded as a build artifact. You can download the output directly from the  Artifacts section on the individual workflow run page.
-
 ## Usage
 
 Run the pipeline:
@@ -67,6 +65,8 @@ python main.py
 ```
 
 The final video will be saved to `content/final_video.mp4`.
+
+GitHub Actions: When executed through a GitHub Actions workflow, the generated video is saved to daily-video/final_video.mp4 and automatically uploaded as a build artifact. You can download the output directly from the  Artifacts section on the individual workflow run page.
 
 ## Notes
 
