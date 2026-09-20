@@ -1,4 +1,5 @@
-# Reddit Shorts Factory
+# Reddit Shorts Generator
+## Reddit Shorts Factory
 
 Automatically generates Reddit-style story videos (YouTube Shorts / TikTok / Reels format) from start to finish — story writing, voiceover, Reddit-post banner, background clip, and burned-in captions — with a single script.
 
